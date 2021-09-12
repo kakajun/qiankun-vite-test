@@ -1,0 +1,40 @@
+{
+  "name": "qiankun-vite-test",
+  "version": "0.0.1",
+  "description": "qiankun demo",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:main": "cd main && cnpm i",
+    "install:vue": "cd vue && cnpm i",
+    "install:vue3": "cd vue && cnpm i",
+    "install:vue3Vite": "cd vue3Vite && cnpm i",
+    "start": "npm-run-all --parallel start:*",
+    "start:main": "cd main && npm start",
+    "start:vue": "cd vue && npm start",
+    "start:vue3": "cd vue3 && npm start",
+    "start:vue3Vite": "cd vue3Vite && npm start",
+    "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
+    "build:vue": "cd vue && npm run build",
+    "build:main": "cd main && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:liugangtaotie/qiankun-mobile-code.git"
+  },
+  "keywords": [
+    "vite2",
+    "vue3",
+    "qiankun",
+    "qiankun-example",
+    "demo"
+  ],
+  "author": "mj",
+  "license": "MIT",
+  "__npminstall_done": false
+}
