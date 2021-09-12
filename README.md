@@ -1,9 +1,10 @@
 # qiankun-example
 
-qiankun 实战 demo，父应用 vue(vite)，子应用用 react(webpack) 和 vue(webpack)
+qiankun 练习 demo，父应用 vue3(vite)，子应用用 vue(webpack) 和 vue3(webpack)和vue3(vite)
 
 ## 一、项目特色
-### 1. 开发环境，秒级更新，vite2成功构建vue2；
+### 1. 开发环境，秒级更新，vite加入子应用需使用vite-plugin-qiankun, 注意父级应用不用加,为什么不加?
+因为官方qiankun没有兼容vite做为子应用,或许后面vite官方兼容了vite做为其子应用后就可以去掉该插件了；
 ### 2. 使用postcss-px-to-viewport 插件，实现响应式布局（任意屏幕适配）；
 ### 3. 根据vant2 自定义主题颜色；
 ### 4. 加入eslint、stylelint、prettier等插件，制定代码统一规范。
