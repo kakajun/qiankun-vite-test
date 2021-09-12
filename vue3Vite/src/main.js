@@ -40,7 +40,8 @@ renderWithQiankun({
    console.log("vite被卸载了");
   instance.unmount();
   instance._container.innerHTML = '';
-  router = null;  // 不卸载  router 会导致其他应用路由失败
+  history.destroy();// 不卸载  router 会导致其他应用路由失败
+  router = null;  
   instance = null;
     },
   });

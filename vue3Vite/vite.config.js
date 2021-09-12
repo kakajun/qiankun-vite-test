@@ -9,7 +9,7 @@ const useDevMode = true     // 如果是在主应用中加载子应用vite,必�
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) =>{
     let config={
-        plugins: [vue(),qiankun('vite', {useDevMode })],
+        plugins: [vue(),qiankun('vue3Vite', {useDevMode })],
         alias: {
         '@': resolve('src'),
         },
