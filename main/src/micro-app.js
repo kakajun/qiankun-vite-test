@@ -6,15 +6,25 @@ const microApps = [
     activeRule: "/vue",
   },
   {
-    name: "vue3",
-    entry:"//localhost:7305/vue3",
-    activeRule: "/vue3",
+    name: "bigdata",
+    entry: "//localhost:7800/bigdata",
+    activeRule: "/bigdata",
   },
   {
-    name: "vue3Vite",
-    entry:"//localhost:7316/vue3Vite",
-    activeRule: "/vue3Vite",
+    name: "bigdata-vite",
+    entry: "//localhost:3100/bigdata-vite",
+    activeRule: "/bigdata-vite",
   },
+  // {
+  //   name: "vue3",
+  //   entry:"//localhost:7305/vue3",
+  //   activeRule: "/vue3",
+  // },
+  // {
+  //   name: "vue3Vite",
+  //   entry:"//localhost:7316/vue3Vite",
+  //   activeRule: "/vue3Vite",
+  // },
 ];
 
 const apps = microApps.map((item) => {

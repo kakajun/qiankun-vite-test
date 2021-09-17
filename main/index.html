@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>QianKun Example</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>QianKun Example</title>
+  </head>
 
-<body>
-  <div class="mainapp">
-    <!-- 标题栏 -->
-    <header class="mainapp-header">
-      <h1>qk</h1>
-    </header>
-    <div class="mainapp-main">
-      <!-- 侧边栏 -->
-      <ul class="mainapp-sidemenu">
-        <li onclick="push('/vue')">vue</li>
-        <li onclick="push('/vue3')">vue3</li>
-        <li onclick="push('/vue3Vite')">vue3Vite</li>
-      </ul>
-      <!-- 子应用  -->
-      <main id="app" class="main-container"></main>
+  <body>
+    <div class="mainapp">
+      <!-- 标题栏 -->
+      <header class="mainapp-header">
+        <h1>qk</h1>
+      </header>
+      <div class="mainapp-main">
+        <!-- 侧边栏 -->
+        <ul class="mainapp-sidemenu">
+          <li onclick="push('/vue')">vue</li>
+          <li onclick="push('/bigdata')">大屏</li>
+          <li onclick="push('/bigdata-vite')">大屏vite</li>
+          <li onclick="push('/vue3')">vue3</li>
+          <li onclick="push('/vue3Vite')">vue3Vite</li>
+        </ul>
+        <!-- 子应用  -->
+        <main id="app" class="main-container"></main>
+      </div>
     </div>
-  </div>
 
-  <script>
-    function push(subapp) { history.pushState(null, subapp, subapp) }
-  </script>
-  <script type="module" src="/src/main.js"></script>
-</body>
+    <script>
+      function push(subapp) { history.pushState(null, subapp, subapp) }
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 
 </html>
