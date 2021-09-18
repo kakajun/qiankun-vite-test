@@ -6,7 +6,7 @@ import microApps from "./micro-app";
 import "nprogress/nprogress.css";
 createApp(App).mount('#app')
 
-
+debugger
 // 定义loader方法，loading改变时，将变量赋值给App.vue的data中的isLoading
 // function loader(loading) {
 //     if (instance && instance.$children) {
@@ -41,6 +41,5 @@ registerMicroApps(apps, {
       }
     ]
   });
-  setDefaultMountApp("/vue");
+  setDefaultMountApp("/bigdata-vite");
   start();
-

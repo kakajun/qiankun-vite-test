@@ -24,8 +24,8 @@ export default defineConfig(({ mode }) =>{
         jsonpFunction: `webpackJsonp_${name}`,
             },
     }
-    if (mode === 'development') {
-        // config.base = 'http://localhost:7316/'
-      }
+    // if (mode === 'development') {
+    //     config.base = 'http://localhost:7316/'
+    //   }
   return config
 })

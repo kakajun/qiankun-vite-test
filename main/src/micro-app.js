@@ -20,11 +20,11 @@ const microApps = [
   //   entry:"//localhost:7305/vue3",
   //   activeRule: "/vue3",
   // },
-  // {
-  //   name: "vue3Vite",
-  //   entry:"//localhost:7316/vue3Vite",
-  //   activeRule: "/vue3Vite",
-  // },
+  {
+    name: "vue3Vite",
+    entry:"//localhost:7316/vue3Vite",
+    activeRule: "/vue3Vite",
+  },
 ];
 
 const apps = microApps.map((item) => {

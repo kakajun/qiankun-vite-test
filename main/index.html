@@ -15,7 +15,7 @@
       <div class="mainapp-main">
         <!-- 侧边栏 -->
         <ul class="mainapp-sidemenu">
-          <li onclick="push('/vue')">vue</li>
+          <!-- <li onclick="push('/vue')">vue</li> -->
           <li onclick="push('/bigdata')">大屏</li>
           <li onclick="push('/bigdata-vite')">大屏vite</li>
           <li onclick="push('/vue3')">vue3</li>
@@ -29,7 +29,6 @@
     <script>
       function push(subapp) { history.pushState(null, subapp, subapp) }
     </script>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <script type="module" src="/src/main.js"></script>  </body>
 
 </html>
