@@ -5,6 +5,21 @@ import routes from './router';
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 import { createRouter, createWebHistory } from 'vue-router';
 
+/**
+ * 注册全局域名默认地址,包括图片和axios都需要
+ */
+ function setDomain() {
+  window.ISNK = document.domain.indexOf('172') > -1 // 如果是172客户的域名,那就拿客户地址,自动判断,这里搞个全局判断标志
+  window.ORIGIN =
+    process.env.NODE_ENV === 'development'
+      ? process.env.VITE_ORIGIN_DEV
+      : window.ISNK
+      ? process.env.VITE_ORIGIN_PRO
+      : process.env.VITE_ORIGIN_DEV
+  // console.log(window.ORIGIN, 'window.ORIGINwindow.ORIGINv')
+  // console.log(process.env.NODE_ENV, 'process.env.node_env')
+ }
+ setDomain()
 let router = null;
 let instance = null;
 let history = null;
@@ -41,13 +56,11 @@ renderWithQiankun({
   instance.unmount();
   instance._container.innerHTML = '';
   history.destroy();// 不卸载  router 会导致其他应用路由失败
-  router = null;  
+  router = null;
   instance = null;
     },
   });
-  
+
   if (!qiankunWindow.__POWERED_BY_QIANKUN__) {
     render();
   }
-
-

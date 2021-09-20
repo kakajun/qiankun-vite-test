@@ -5,16 +5,16 @@ const microApps = [
     entry: "//localhost:7301/vue",
     activeRule: "/vue",
   },
-  {
-    name: "bigdata",
-    entry: "//localhost:7800/bigdata",
-    activeRule: "/bigdata",
-  },
-  {
-    name: "bigdata-vite",
-    entry: "//localhost:3100/bigdata-vite",
-    activeRule: "/bigdata-vite",
-  },
+  // {
+  //   name: "bigdata",
+  //   entry: "//localhost:7800/bigdata",
+  //   activeRule: "/bigdata",
+  // },
+  // {
+  //   name: "bigdata-vite",
+  //   entry: "//localhost:3100/bigdata-vite",
+  //   activeRule: "/bigdata-vite",
+  // },
   // {
   //   name: "vue3",
   //   entry:"//localhost:7305/vue3",
