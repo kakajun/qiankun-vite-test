@@ -5,9 +5,7 @@ import routes from './router';
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 import { createRouter, createWebHistory } from 'vue-router';
 
-/**
- * 注册全局域名默认地址,包括图片和axios都需要
- */
+
  function setDomain() {
   window.ISNK = document.domain.indexOf('172') > -1 // 如果是172客户的域名,那就拿客户地址,自动判断,这里搞个全局判断标志
   window.ORIGIN =
@@ -16,9 +14,8 @@ import { createRouter, createWebHistory } from 'vue-router';
       : window.ISNK
       ? process.env.VITE_ORIGIN_PRO
       : process.env.VITE_ORIGIN_DEV
-  // console.log(window.ORIGIN, 'window.ORIGINwindow.ORIGINv')
-  // console.log(process.env.NODE_ENV, 'process.env.node_env')
  }
+ //  设置主域名,但不跟随基座端口变化而变化
  setDomain()
 let router = null;
 let instance = null;

@@ -1,7 +1,7 @@
 
 <template>
   <img alt="Vue logo"
-       src="/assets/logo.png" />
+       :src="imgSrc" />
   <router-link to="/">Home</router-link> |
   <router-link to="/about">About</router-link>
   <router-view />
@@ -16,7 +16,7 @@ import HelloWorld from './components/HelloWorld.vue'
     },
     computed:{
       imgSrc(){
-        return  "/assets/logo.png"
+        return  window.ORIGIN+"/assets/logo.png"
       }
     }
   }
