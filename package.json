@@ -20,6 +20,7 @@
     "start:vue3Vite": "cd vue3Vite && npm start",
     "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
     "build:vue": "cd vue && npm run build",
+    "build:vue3Vite": "cd vue3Vite && npm run build",
     "build:main": "cd main && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

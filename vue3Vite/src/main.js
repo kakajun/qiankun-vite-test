@@ -13,7 +13,7 @@ import { createRouter, createWebHistory } from 'vue-router';
       ? process.env.VITE_ORIGIN_DEV
       : window.ISNK
       ? process.env.VITE_ORIGIN_PRO
-      : process.env.VITE_ORIGIN_DEV
+      : process.env.VITE_ORIGIN_PRO_TEST
  }
  //  设置主域名,但不跟随基座端口变化而变化
  setDomain()
