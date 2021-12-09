@@ -8,26 +8,10 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "install": "npm-run-all --serial install:*",
-    "install:main": "cd main && yarn",
-    "install:vue": "cd vue && yarn",
-    "install:vue3": "cd vue && yarn",
-    "install:vue3Vite": "cd vue3Vite && yarn",
-    "start": "npm-run-all --parallel start:*",
-    "start:main": "cd main && npm start",
-    "start:vue": "cd vue && npm start",
-    "start:vue3": "cd vue3 && npm start",
-    "start:vue3Vite": "cd vue3Vite && npm start",
-    "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
-    "build:vue": "cd vue && npm run build",
-    "build:vue3Vite": "cd vue3Vite && npm run build",
-    "build:main": "cd main && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com:liugangtaotie/qiankun-mobile-code.git"
-  },
+
   "keywords": [
     "vite2",
     "vue3",
@@ -36,6 +20,5 @@
     "demo"
   ],
   "author": "mj",
-  "license": "MIT",
-  "__npminstall_done": false
+  "license": "MIT"
 }

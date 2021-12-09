@@ -1,9 +1,9 @@
 import store from "./store";
 const microApps = [
   {
-    name: "vue",
-    entry: "//localhost:7301/vue",
-    activeRule: "/vue",
+    name: "bigdata1",
+    entry: "//localhost:7301/bigdata1",
+    activeRule: "/bigdata1",
   },
   {
     name: "vue3",
@@ -14,6 +14,11 @@ const microApps = [
     name: "vue3Vite",
     entry:"//localhost:7316/vue3Vite",
     activeRule: "/vue3Vite",
+  },
+   {
+    name: "bigdata",
+    entry:"//localhost:7800/bigdata",
+    activeRule: "/bigdata",
   },
 ];
 

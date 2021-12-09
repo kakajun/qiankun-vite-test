@@ -13,11 +13,11 @@ Vue.use(ElementUI);
 
 let router = null;
 let instance = null;
-debugger;
+
 function render(props = {}) {
   const { container } = props;
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? "/vue" : "/",
+    base: window.__POWERED_BY_QIANKUN__ ? "/bigdata1" : "/",
     mode: "history",
     routes,
   });
