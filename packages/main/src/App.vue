@@ -34,7 +34,22 @@ export default {
       }
     },
   },
-
+    created() {
+    this.bindCurrent();
+    NProgress.start();
+  },
+mounted() {
+  console.log(store,"storestore");
+  /* 这里模拟主程序更改了全局变量 */
+  setTimeout(() => {
+  store.setGlobalState({
+      ignore: '***********main',
+      user: {
+        name: '**********main',
+      },
+    });
+  }, 4000);
+},
   methods: {
     goto(item) {
       history.pushState(null, item.activeRule, item.activeRule);
@@ -47,36 +62,10 @@ export default {
         this.current = path;
       }
     },
-    // listenRouterChange() {
-    //   console.info("listenRouterChange");
-    //   const _wr = function (type) {
-    //     const orig = history[type];
-    //     return function () {
-    //       const rv = orig.apply(this, arguments);
-    //       const e = new Event(type);
-    //       e.arguments = arguments;
-    //       window.dispatchEvent(e);
-    //       return rv;
-    //     };
-    //   };
-    //   history.pushState = _wr("pushState");
 
-    //   window.addEventListener("pushState", this.bindCurrent);
-    //   window.addEventListener("popstate", this.bindCurrent);
+  },
 
-    //   this.$once("hook:beforeDestroy", () => {
-    //     window.removeEventListener("pushState", this.bindCurrent);
-    //     window.removeEventListener("popstate", this.bindCurrent);
-    //   });
-    // },
-  },
-  created() {
-    this.bindCurrent();
-    NProgress.start();
-  },
-  mounted() {
-    // this.listenRouterChange();
-  },
+
 };
 </script>
 

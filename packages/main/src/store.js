@@ -7,6 +7,7 @@ const initialState = reactive({
   user: {
     name: "zhangsan",
   },
+  ignore:"ccccc",
   num: 0,
 });
 
