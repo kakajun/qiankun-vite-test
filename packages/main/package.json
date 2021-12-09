@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0",
-    "qiankun": "^2.4.10",
+    "qiankun": "^2.6.2",
     "vue": "^3.2.6",
     "vuex": "^4.0.2",
     "vue-router": "^4.0.11"

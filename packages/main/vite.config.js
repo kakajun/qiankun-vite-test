@@ -19,11 +19,19 @@ export default defineConfig({
     // Load proxy configuration from .env
     // proxy: createProxy(VITE_PROXY),
     proxy: {
-      "/xxxx": {
-        target: "xxxx",
+       // 字符串简写写法  // 这个有问题
+      // '/cnbi': 'http://192.168.2.207:9005',
+      // '/api': 'http://192.168.2.207:9008/cnbi',
+      // 选项写法
+      '/cnbi': {
+        target: 'http://192.168.2.207:9005',
         changeOrigin: true,
-        ws: true,
-        rewrite: (path) => path.replace(/^\/xxxx/, ""),
+        rewrite: (path) => path.replace(/^\/cnbi/, '')
+      },
+        '/api': {
+        target: 'http://192.168.2.207:9005',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
       },
     },
   },
