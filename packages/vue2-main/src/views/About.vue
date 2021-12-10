@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <h1>11111111</h1>
-     <div id="cnbi-viewport"></div>
     <h1>This is about page</h1>
   </div>
 </template>
