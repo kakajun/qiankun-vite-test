@@ -26,7 +26,7 @@ new Vue({
 registerMicroApps([
   {
     name: 'dash',
-    entry: '//localhost:7800',
+    entry: '//localhost:7802',
     container: '#cnbi-viewport',
     activeRule: '/dash'
     // props: { data: { store, router } }

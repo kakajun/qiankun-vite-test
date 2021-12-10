@@ -1,5 +1,6 @@
 <template>
   <div class="layout-wrapper">
+    <!-- 可以放到这里,也可以放到对应子路由的页面里面位置不重要 -->
     <div id="cnbi-viewport"></div>
   </div>
 </template>

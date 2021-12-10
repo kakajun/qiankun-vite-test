@@ -5,7 +5,7 @@
       |
       <router-link to="/">Home</router-link>
       |
-      <router-link to="/about">About</router-link>
+      <router-link to="/dash/main">/dash-About</router-link>
       <router-link to="/about1">About1</router-link>
     </div>
      <div id="cnbi-viewport"></div>
