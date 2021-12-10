@@ -16,9 +16,9 @@ const microApps = [
   //   activeRule: "/vue3Vite",
   // },
    {
-    name: "portal",
-    entry:"http://localhost:7800",
-    activeRule: "/portal/view/578",
+    name: "dash",
+    entry:"http://localhost:7802",
+    activeRule: "/dash",
   },
 ];
 

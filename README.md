@@ -45,6 +45,24 @@ npm start
 3. 图片加载失败?? 因为vite的代码没有经过打包,所以不会自动加上域名,在父应用就看到图片挂了!!!百度也查不出个123, 甚至想用axios请求图片吧,看又不是常规vue写法了,不至于吧!!最后仔细又看了一遍配置文档,发现可以配置config.base,指定vite服务域名, 当基座打开浏览时,依然挂的是子应用域名,有时候base还是不生效,这里采用的是图片资源直接放到public里面, 引用图片时加个window.ORIGIN, 这个值是mian里面初始化过的,所有前缀都加上,这样子基座里面请求的图片是子应用带上的
 4. 路由跳转出错? 这个也是我粗心,复制别人的 window.__POWERED_BY_QIANKUN__ 然后路由死活不行, 最后看文档要写成qiankunWindow.__POWERED_BY_QIANKUN__
 5. 子应用跳转vue3Vite/vue ,什么鬼?路由叠加? 抓狂,原来是unmount里面漏写了history.destroy()
+6. axios请求时, 需要主工程也配置相应代理, 否则请求会出现404, 因为开发环境下是主工程做的代理替换
+7. 加载子应用的某一个路由? 怎么设定? 在测试过程中, 好几个小时的尝试都是在registerMicroApps 时, 如果name 和activeRule 不匹配时, 就不能进行模板替换,
+- name（子应用的名称） 这个好理解, 比如我的子应用叫dash(随意), 后面dash里面的其他路由都会挂在这个后面
+
+- activeRule（子应用的激活规则） /dash/index, 路由命中后,跳转/dash/index路由, 想法很不错, 但是事与愿违, 不出意外跳进去没有问题, 但是当点击该子应用其他按钮跳转路由时就有问题了,跳完页面就被卸载了......为什么会这样子呢? 因为路由匹配机制, /dash/index  和 /dash/view 它会认为不匹配, 直接就卸载了微应用, 但如果我就命名为 /dash   那么/dash/index和/dash/view 它会认为是同一个微应用
+- props（主应用需要传递给子应用的数据）
+8. 加载子应用失败? 是的, 怎么都不加载.....页面空白, 没有dom:
+- 只能一一检查配置, 但确实没有配错
+- 其他路由有影响? 干掉所有路由, 加载一个测试的页面..没用
+最后检查到public的cdn引用加载响应qiankun的替换, 具体原因没查, 就是下面几个影响, 注释掉之后马上就加载了服务, 高德地图影响qiankun?......
+```js
+    <script type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.15&key=72601eb4f91ef7b47a9b31163e10e37f"></script>
+    <script src="https://webapi.amap.com/loca?key=72601eb4f91ef7b47a9b31163e10e37f&v=1.3.2">
+    </script>
+    <script src="//webapi.amap.com/ui/1.1/main.js?v=1.1.1"></script>
+```
+
 
 至此改造算是完成了qiankun+vite的基础配置
 
