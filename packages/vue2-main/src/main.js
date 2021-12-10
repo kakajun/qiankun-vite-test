@@ -7,7 +7,7 @@ import VueRouter from "vue-router";
 import App from "./App.vue";
 import routes from "./router";
 import store from "./store";
-import { registerMicroApps, start } from 'qiankun';
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 
@@ -22,15 +22,4 @@ new Vue({
     store,
     render: (h) => h(App),
   }).$mount("#app");
-
-registerMicroApps([
-  {
-    name: 'dash',
-    entry: '//localhost:7802',
-    container: '#cnbi-viewport',
-    activeRule: '/dash'
-    // props: { data: { store, router } }
-  }
-])
-
-start()
+require('./bb')
