@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "qiankun demo",
   "private": true,
- "workspaces": [
+   "workspaces": [
         "packages/*"
     ],
   "scripts": {
@@ -12,6 +12,7 @@
     "start:main": "cd packages/main && npm start",
     "start:vue": "cd packages/vue && npm start",
     "start:vue3": "cd packages/vue3 && npm start",
+     "start:vue2Main": "cd packages/vue2-main && npm start",
     "start:vue3Vite": "cd packages/vue3Vite && npm start",
     "build": "npm-run-all build:* && bash ./scripts/bundle.sh",
     "build:vue": "cd packages/vue && npm run build",

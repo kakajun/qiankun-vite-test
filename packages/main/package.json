@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0",
-    "qiankun": "^2.6.2",
-    "vue": "^3.2.6",
+     "qiankun": "^2.7.0",
+    "vue": "^3.2.31",
     "vuex": "^4.0.2",
     "vue-router": "^4.0.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.0",
-    "@vue/compiler-sfc": "^3.2.6",
+     "@vue/compiler-sfc": "^3.2.31",
     "vite": "^2.5.8",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.24.2",

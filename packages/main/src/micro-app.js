@@ -5,20 +5,20 @@ const microApps = [
     entry: "//localhost:7301/vue",
     activeRule: "/vue",
   },
-  // {
-  //   name: "vue3",
-  //   entry:"//localhost:7305/vue3",
-  //   activeRule: "/vue3",
-  // },
-  // {
-  //   name: "vue3Vite",
-  //   entry:"//localhost:7316/vue3Vite",
-  //   activeRule: "/vue3Vite",
-  // },
+  {
+    name: "vue3",
+    entry:"//localhost:7305/vue3",
+    activeRule: "/vue3",
+  },
+  {
+    name: "vue3Vite",
+    entry:"//localhost:7316/vue3Vite",
+    activeRule: "/vue3Vite",
+  },
    {
-    name: "dash",
-    entry:"http://localhost:7802",
-    activeRule: "/dash",
+    name: "vue2-main",
+    entry:"http://localhost:7401",
+    activeRule: "/vue2-main",
   },
 ];
 

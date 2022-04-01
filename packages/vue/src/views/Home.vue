@@ -4,6 +4,10 @@
     <HelloWorld msg="Vue.js Demo"/>
 
     <el-button @click="dialogVisible = true" type="text">Open Dialog</el-button>
+    <div>
+        <el-button @click="changeGlobState" type="text">改变全局变量</el-button>
+    </div>
+
 
     <el-dialog
       :before-close="handleClose"
@@ -43,6 +47,16 @@
           .catch(_ => {
           });
       },
+      changeGlobState(){
+            // 这里是主动改变主工程全局变量
+     this.$qiankun.setGlobalState &&
+    this.$qiankun.setGlobalState({
+      ignore: 'hhhhhh',
+      user: {
+        name: '我vue触发name',
+      },
+    });
+      }
     },
   };
 </script>

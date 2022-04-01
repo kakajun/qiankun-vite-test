@@ -1,5 +1,7 @@
 <template>
   <div class="layout-wrapper">
+    <div>我是主应用的头部, 看看下面我的状态, 是不是能变化</div>
+    <div>{{user.name}}</div>
     <!-- 可以放到这里,也可以放到对应子路由的页面里面位置不重要 -->
     <div id="cnbi-viewport"></div>
   </div>
