@@ -7,6 +7,7 @@ function resolve(dir) {
 
 const port = 7301; // dev port
 
+
 module.exports = {
   /**
    * You will need to set publicPath if you plan to deploy your site under a sub path,
@@ -33,6 +34,19 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
     },
   },
+
+  //  css: {
+  //   loaderOptions: {
+  //     css: {
+  //       // 这里的选项会传递给 css-loader
+  //         localIdentName: '[name]-[hash]',
+  //       // camelCase: 'only'
+  //     },
+  //     // postcss: {
+  //     //   // 这里的选项会传递给 postcss-loader
+  //     // }
+  //   }
+  // },
   // 自定义webpack配置
   configureWebpack: {
     resolve: {
