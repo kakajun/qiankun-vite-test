@@ -23,12 +23,6 @@ export default defineConfig(({ mode }) => {
         port: 7316,
         cors: true,
         },
-        output: {
-        // 把子应用打包成 umd 库格式
-        library: `${name}-[name]`,
-        libraryTarget: 'umd',
-        jsonpFunction: `webpackJsonp_${name}`,
-      },
       define: {
         'process.env': env
       }
