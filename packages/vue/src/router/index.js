@@ -10,20 +10,31 @@ const routes = [
     name: 'home',
     component: Home,
   },
+  //  {
+  //   path: '/vue/*',
+  //   component: () => import('vue'),
+  // },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: () => import( '../views/About.vue'),
+    children: [ {
+      path: '/about/text',
+      // 二级路由
+      component: () => import('../views/Text.vue'),
+      // children: [{
+      //     // 三级路由
+      //     path: 'text3',
+      //     name: 'text3',
+      //     component: () => import('../views/Text3.vue'),
+      //       },
+      //   ]
+    }
+    ]
   },
   {
     path: '/about1',
     name: 'about1',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About1.vue'),
   },
 ];
