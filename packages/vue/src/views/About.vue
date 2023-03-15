@@ -9,7 +9,7 @@
 export default {
   methods:{
     clickTo(){
-      this.$router.push('/about/text')
+      this.$router.push('//text-32')
     }
   }
 }

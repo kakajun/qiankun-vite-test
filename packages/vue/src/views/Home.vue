@@ -7,6 +7,9 @@
     <div>
         <el-button @click="changeGlobState" type="text">改变全局变量</el-button>
     </div>
+    <div>
+        <el-button @click="gotoDetail" type="text">跳到嵌套三级路由</el-button>
+    </div>
 
 
     <el-dialog
@@ -39,6 +42,9 @@
       };
     },
     methods: {
+      gotoDetail(){
+        this.$router.push('/services/1')
+      },
       handleClose(done) {
         this.$confirm('Sure to close？')
           .then(_ => {

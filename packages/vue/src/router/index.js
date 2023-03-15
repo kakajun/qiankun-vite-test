@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-
+import Services from '../views/Services.vue';
+import SubServiceDetail from '../views/SubServiceDetail.vue';
+import ServiceDetail from '../views/ServiceDetail.vue';
 Vue.use(VueRouter);
 
 const routes = [
@@ -10,11 +12,7 @@ const routes = [
     name: 'home',
     component: Home,
   },
-  //  {
-  //   path: '/vue/*',
-  //   component: () => import('vue'),
-  // },
-  {
+   {
     path: '/about',
     name: 'about',
     component: () => import( '../views/About.vue'),
@@ -22,16 +20,29 @@ const routes = [
       path: '/about/text',
       // 二级路由
       component: () => import('../views/Text.vue'),
-      // children: [{
-      //     // 三级路由
-      //     path: 'text3',
-      //     name: 'text3',
-      //     component: () => import('../views/Text3.vue'),
-      //       },
-      //   ]
     }
     ]
   },
+ {
+      path: '/services/:serviceId',
+      name: 'services',
+      component: Services,
+      props: true,
+      children: [
+        {
+          path: ':subServiceId',
+          name: 'sub-service-detail',
+          component: SubServiceDetail,
+          props: true
+        },
+        {
+          path: ':subServiceId/:id',
+          name: 'service-detail',
+          component: ServiceDetail,
+          props: true
+        }
+      ]
+    },
   {
     path: '/about1',
     name: 'about1',
