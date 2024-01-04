@@ -14,6 +14,16 @@ module.exports = {
   devServer: {
     hot: true,
     port,
+    allowedHosts:'all',
+    historyApiFallback: {
+      index: 'http://localhost:7305/index.html' // xxx为路径，和打包output配置有关
+    },
+    client:{
+      overlay: {
+        warnings: false,
+        errors: true,
+      },
+    },
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
