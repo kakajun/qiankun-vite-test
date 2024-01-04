@@ -1,6 +1,7 @@
 
 <template>
   <img alt="Vue logo"
+  class="img-wrapper"
        :src="imgSrc" />
   <router-link to="/">Home</router-link> |
   <router-link to="/about">About</router-link>
@@ -29,5 +30,8 @@ import HelloWorld from './components/HelloWorld.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.img-wrapper{
+  border: 1px solid #ccc;
 }
 </style>

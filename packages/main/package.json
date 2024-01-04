@@ -9,23 +9,23 @@
   },
   "dependencies": {
     "nprogress": "^0.2.0",
-     "qiankun": "^2.7.0",
-    "vue": "^3.2.31",
-    "vuex": "^4.0.2",
-    "vue-router": "^4.0.11"
+    "qiankun": "^2.10.16",
+    "vue": "^3.4.5",
+    "pinia": "^2.1.7",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.6.0",
-     "@vue/compiler-sfc": "^3.2.31",
-    "vite": "^2.5.8",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.24.2",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "@vue/compiler-sfc": "^3.4.5",
+    "vite": "^5.0.10",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-standard": "^5.0.0",
-    "eslint-plugin-vue": "^7.17.0",
-    "prettier": "^2.4.1",
-    "sass": "^1.41.1"
+    "eslint-plugin-vue": "^9.19.2",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.7"
   }
 }
