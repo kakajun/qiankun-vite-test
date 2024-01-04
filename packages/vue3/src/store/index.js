@@ -1,12 +1,3 @@
-import { createStore } from 'vuex';
-import count from './count';
-
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  getters: {},
-  modules: {
-    count,
-  },
-});
+import { createPinia } from 'pinia'
+const pinia = createPinia()
+export default pinia

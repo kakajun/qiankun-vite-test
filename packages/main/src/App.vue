@@ -51,6 +51,7 @@ mounted() {
         name: '**********main',
       },
     });
+    NProgress.done();
   }, 4000);
 },
   methods: {

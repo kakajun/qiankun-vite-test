@@ -1,6 +1,6 @@
 {
-  "name": "my-vue-app",
-  "version": "0.0.0",
+  "name": "main-app",
+  "version": "0.0.1",
   "scripts": {
     "start": "vite",
     "dev": "vite",
