@@ -15,6 +15,7 @@ module.exports = {
     hot: true,
     port,
     allowedHosts:'all',
+    // 升级到webpack5后，会有变化， 详情http://www.manongjc.com/detail/42-dhqszxnagmkqnzp.html
     historyApiFallback: {
       index: 'http://localhost:7305/index.html' // xxx为路径，和打包output配置有关
     },
