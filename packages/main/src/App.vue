@@ -18,7 +18,7 @@ export default {
       isFirst: true,
       isLoading: true,
       microApps,
-      current: "/vue/",
+      current: "/appvue/",
     };
   },
   computed: {
@@ -66,7 +66,6 @@ mounted() {
         this.current = path;
       }
     },
-
   },
 
 

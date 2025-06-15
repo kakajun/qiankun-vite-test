@@ -62,7 +62,7 @@
     this.$qiankun.setGlobalState({
       ignore: 'hhhhhh',
       user: {
-        name: '我vue触发name',
+        name: '我appvue触发name',
       },
     });
       }

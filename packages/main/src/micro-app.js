@@ -1,9 +1,9 @@
 import store from "./store";
 const microApps = [
   {
-    name: "vue",
-    entry: "//localhost:7301/vue",
-    activeRule: "/vue",
+    name: "appvue",
+    entry: "//localhost:7301/appvue",
+    activeRule: "/appvue",
   },
   {
     name: "vue3",
