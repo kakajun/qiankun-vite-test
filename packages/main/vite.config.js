@@ -23,16 +23,21 @@ export default defineConfig({
       // '/cnbi': 'http://192.168.2.207:9005',
       // '/api': 'http://192.168.2.207:9008/cnbi',
       // 选项写法
-      '/cnbi': {
-        target: 'http://192.168.2.207:9005',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/cnbi/, '')
-      },
-        '/api': {
-        target: 'http://192.168.2.207:9005',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      },
+      // '/cnbi': {
+      //   target: 'http://192.168.2.207:9005',
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/cnbi/, '')
+      // },
+'/vue2Asset': {
+  target: 'http://localhost:7301',
+  changeOrigin: true,
+  rewrite: (path) => path.replace(/^\/vue2Asset/, '/vue2Asset')
+}
+      //   '/api': {
+      //   target: 'http://192.168.2.207:9005',
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/api/, '')
+      // },
     },
   },
 });

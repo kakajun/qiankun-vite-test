@@ -3,20 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
     "core-js": "^3.35.0",
-     "vue": "^3.4.5",
-    "vue-router": "^4.2.5",
-    "pinia": "^2.1.7"
+     "vue": "^3.5.16",
+    "vue-router": "^4.5.1",
+    "pinia": "^3.0.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-service": "^5.0.8",
-   "@vue/compiler-sfc": "^3.4.5",
+   "@vue/compiler-sfc": "^3.5.16",
     "less": "^4.2.0",
     "less-loader": "^11.1.4"
   },

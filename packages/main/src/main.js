@@ -4,6 +4,7 @@ import  '@/assets/index.scss';
 import { registerMicroApps, start,setDefaultMountApp } from 'qiankun';
 import microApps from "./micro-app";
 import "nprogress/nprogress.css";
+
 const instance= createApp(App).mount('#app')
 
 
