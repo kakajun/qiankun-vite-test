@@ -1,8 +1,10 @@
 
 <template>
+
   <img alt="Vue logo"
   class="img-wrapper"
        :src="imgSrc" />
+     <img alt="Vue logo" src="/vue2Asset/icon.png"/>
   <router-link to="/">Home</router-link> |
   <router-link to="/about">About</router-link>
   <router-view />

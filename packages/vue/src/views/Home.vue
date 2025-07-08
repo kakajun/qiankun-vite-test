@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <!-- 通过代理获取图片 -->
+      <img alt="Vue logo" src="/vue2Asset/icon.png"/>
+    <!-- 下面是相对路径引用 -->
     <img alt="Vue logo" src="../assets/logo.png"/>
     <HelloWorld msg="Vue.js Demo"/>
 
@@ -59,7 +62,7 @@
     this.$qiankun.setGlobalState({
       ignore: 'hhhhhh',
       user: {
-        name: '我vue触发name',
+        name: '我appvue触发name',
       },
     });
       }

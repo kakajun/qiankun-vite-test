@@ -1,9 +1,9 @@
 import store from "./store";
 const microApps = [
   {
-    name: "vue",
-    entry: "//localhost:7301/vue",  // 打包到服务器, 这里也不需要动, 让他自己加载本地链接就行了, 只是ngnix 配置的端口保持一致就行了
-    activeRule: "/vue",
+    name: "appvue",
+    entry: "//localhost:7301/appvue",  // 打包到服务器, 这里也不需要动, 让他自己加载本地链接就行了, 只是ngnix 配置的端口保持一致就行了
+    activeRule: "/appvue",
   },
   {
     name: "vue3",
@@ -25,7 +25,7 @@ const microApps = [
 const apps = microApps.map((item) => {
   return {
     ...item,
-    container: "#cnbi-viewport", // 子应用挂载的div
+    container: "#cnbi-viewport", // 子应用挂载的div, 也可以是不同的容器,那么久需要container, 写到microApps的对象里面, 看自己应用的需要
     props: {
       routerBase: item.activeRule, // 下发基础路由
       getGlobalState: store.getGlobalState, // 下发getGlobalState方法
