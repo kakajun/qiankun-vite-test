@@ -41,4 +41,4 @@ registerMicroApps(apps, {
     ]
   });
   setDefaultMountApp("/vue3Vite");
-  start();
+  start();   // 也可以不在这里start , start 放到主工程加载的对应子页面里面的mouted 里面, 避免一开始就加载子应用
