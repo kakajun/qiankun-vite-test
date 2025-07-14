@@ -38,12 +38,26 @@ function render(props = {}) {
   }
 }
 
+function storeTest(props) {
+  props.onGlobalStateChange &&
+    props.onGlobalStateChange(
+      (value, prev) =>
+        console.log(`[onGlobalStateChange - ${props.name}]:`, value, prev),
+      true
+    )
+
+}
+
 // some code
 renderWithQiankun({
     mount(props) {
     console.log("viteapp mount");
-    render(props);
-    // console.log(instance.config.globalProperties.$route,"444444444");
+     storeTest(props)
+     render(props);
+     instance.config.globalProperties.$getGlobalState = props.getGlobalState
+        instance.config.globalProperties.$onGlobalStateChange =
+      props.onGlobalStateChange
+    instance.config.globalProperties.$setGlobalState = props.setGlobalState
     },
     bootstrap() {
       console.log('bootstrap');

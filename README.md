@@ -88,6 +88,15 @@ npm start
 
   子工程在main里面接收, 然后作为方法,直接挂在到全局,`Vue.prototype.$qiankun=props`,  子应用的vue页面通过` this.$qiankun`可以获得所有方法, 然后进行操作, 具体看vue子应用的App页面
 
+vue3 的父子应用通信:
+1. 子应用通过props接收主应用的方法, 然后进行操作
+2. 在main.js 中挂载全局方法, 在 `HelloWorld`中使用方法,具体看demo
+```js
+  instance.config.globalProperties.$getGlobalState = props.getGlobalState
+  instance.config.globalProperties.$onGlobalStateChange =props.onGlobalStateChange
+  instance.config.globalProperties.$setGlobalState = props.setGlobalState
+```
+
 ## 六、部署
 
 1. 配置nginx的代理放到主工程里面, 子工程也要相应配置, 这样方便单独打开子应用(假如不需要依赖主工程)
