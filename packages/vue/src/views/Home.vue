@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <!-- 通过代理获取图片 -->
-      <img alt="Vue logo" src="/vue2Asset/icon.png"/>
+      <img alt="Vue logo" class="icon" src="/vue2Asset/icon.png"/>
     <!-- 下面是相对路径引用 -->
-    <img alt="Vue logo" src="../assets/logo.png"/>
+    <img alt="Vue logo" class="icon" src="../assets/logo.png"/>
     <HelloWorld msg="Vue.js Demo"/>
 
     <el-button @click="dialogVisible = true" type="text">Open Dialog</el-button>
@@ -69,3 +69,10 @@
     },
   };
 </script>
+<style scoped>
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+</style>

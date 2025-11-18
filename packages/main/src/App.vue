@@ -1,8 +1,10 @@
 <template>
   <div class="layout-wrapper">
     <div>我是主应用的头部, 看看下面我的状态, 是不是能变化</div>
-    <div>{{ user.name }}</div>
-    <button @click="changeGlobState()">点击修改主工程状态</button>
+    <div class="status-row">
+      <div class="status-text">{{ user.name }}</div>
+      <button @click="changeGlobState()">点击修改主工程状态</button>
+    </div>
     <!-- 可以放到这里,也可以放到对应子路由的页面里面位置不重要 -->
     <!-- 也可以放到对应的路由页面下 -->
     <div id="cnbi-viewport"></div>
@@ -79,5 +81,48 @@ body {
 
 .layout-wrapper {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-text {
+  font-size: 16px;
+  color: #111827;
+}
+
+#cnbi-viewport {
+  min-height: 480px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
 }
 </style>

@@ -10,6 +10,7 @@ const useDevMode = true     // 如果是在主应用中加载子应用vite,必�
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
+  const isProduction = mode === 'production'
   let config = {
         plugins: [vue(),qiankun('vue3Vite', {useDevMode })],
         resolve: {
@@ -18,6 +19,7 @@ export default defineConfig(({ mode }) => {
               '@': resolve('src'),
               },
           },
+        base: isProduction ? '/vue3Vite/' : '/',
         server: {
         host: '0.0.0.0' ,// 暴露内网ip
         port: 7316,
